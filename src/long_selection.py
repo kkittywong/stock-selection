@@ -129,7 +129,6 @@ def select_long_book(
     composite = sum(
         scores[factor] * weight
         for factor, weight in LONG_FACTOR_WEIGHTS.items()
-        if factor in scores.columns
     )
     scores["composite_score"] = composite
 

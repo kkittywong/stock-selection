@@ -133,7 +133,6 @@ def select_short_book(
     composite = sum(
         scores[factor] * weight
         for factor, weight in SHORT_FACTOR_WEIGHTS.items()
-        if factor in scores.columns
     )
     scores["composite_score"] = composite
 
